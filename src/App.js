@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Switch, Route } from "react-router";
+import Hero from "./home";
+import { Discover, Popular, Upcoming } from "./movies";
+import Single from "./single";
+import Navbar from "./navbar";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <Navbar />
+      <Switch>
+        <Route path="/" exact>
+          <Hero />
+          <Popular />
+          <Upcoming />
+        </Route>
+        <Route path="/:media_type/:id" children={<Single />} />
+        <Route path="/movies">
+          <Discover />
+        </Route>
+      </Switch>
+    </main>
   );
 }
 

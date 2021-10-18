@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../Streaming"
+		},
+		{
+			"path": "../../react-projects-master"
+		},
+		{
+			"path": "../../react-advanced-2020-master"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Streaming"
+	}
+}
